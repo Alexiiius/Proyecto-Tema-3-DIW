@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+      "music-metadata-browser": "^2.5.10",
+      "three": "^0.162.0"
+    },
+    "devDependencies": {
+      "vite": "^5.1.4"
+    }
+  }
+  

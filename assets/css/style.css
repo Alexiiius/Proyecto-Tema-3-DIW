@@ -1,0 +1,42 @@
+@font-face{
+    font-family: "RetroFont";
+    src: url("../fonts/04B_30__.TTF") format("truetype");
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+      "header header header header"
+      "col3 col2 col2 col1";
+    grid-template-rows: 50vh auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 100vh;
+    background: aquamarine !important;
+    font-family: "RetroFont" !important;
+    color: #eee;
+    overflow: hidden !important;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #555;
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; /* Permite el desbordamiento */
+    width: 100%; /* Asegura que el contenedor ocupa todo el espacio disponible */
+    height: 100%; /* Asegura que el contenedor ocupa todo el espacio disponible */
+}
+
+#video {
+    width: 100%; /* Asegura que el contenedor ocupa todo el espacio disponible */
+    height: 100%;
+}
