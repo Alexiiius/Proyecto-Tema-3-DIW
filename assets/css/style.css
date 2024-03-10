@@ -66,16 +66,8 @@ header {
     display: flex; /* Hace que espacio2 sea un contenedor flex */
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
-    flex-direction: column;
-    flex-basis: auto;
-    overflow: hidden;
     margin: 0.5rem;
     padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 #000;
-    background-color: #333;
-    color: white;
-    font-size: 1.5rem;
 }
 
 /*  reproductor  */
@@ -225,4 +217,17 @@ button {
   
   .indicator.active {
     background: pink;
+  }
+
+  /* modelo 3d */
+
+  #container-3d {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    z-index: 1;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 #000;
+    background-color: #333;
   }

@@ -27,7 +27,7 @@ const loaderGLTF = new GLTFLoader();
 
 let model;
 
-loaderGLTF.load('/salami/modelos/etrian/scene.gltf',
+loaderGLTF.load('/assets/modelos/etrian/scene.gltf',
     function (gltf) {
         model = gltf.scene;
         scene.add(model);
