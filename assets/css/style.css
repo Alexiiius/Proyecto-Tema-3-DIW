@@ -12,6 +12,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     min-height: 100vh;
     background-image: url("../media/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "RetroFont" !important;
     color: #0f0101;
     overflow: hidden !important;
@@ -48,6 +50,7 @@ header {
     display: flex; /* Hace que espacio1 sea un contenedor flex */
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
+    padding: 1rem;
 }
 
 #espacio2 {
@@ -55,7 +58,7 @@ header {
     display: flex; /* Hace que espacio1 sea un contenedor flex */
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
-    position: relative;
+    flex-direction: column;
 }
 
 #espacio3 {
@@ -74,6 +77,8 @@ header {
     color: white;
     font-size: 1.5rem;
 }
+
+/*  reproductor  */
 
 .contenedor {
     display: flex;
@@ -181,11 +186,27 @@ button {
     margin: 10px 0;
 }
 
+/*  canvas  */
+
 #dibujo-canvas {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 #000;
+}
+
+#contenedor-canvas {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    background-color: #333;
 }
 
 #image-indicators {
