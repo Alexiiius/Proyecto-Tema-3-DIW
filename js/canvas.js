@@ -1,60 +1,32 @@
 'use strict'
 
-let dibujoCanvas = document.querySelector('#espacio2 canvas');
+let dibujoCanvas = document.querySelector('#dibujo-canvas');
 dibujoCanvas.width = dibujoCanvas.offsetWidth;
 dibujoCanvas.height = dibujoCanvas.offsetHeight;
 let myCtx = dibujoCanvas.getContext('2d');
 
 let currentImgIndex = 0;
 let imgSources = [
-  '/assets/media/images/1(1).jpg',
-  '/assets/media/images/1(2).jpg',
-  '/assets/media/images/1(3).jpg',
-  '/assets/media/images/1(4).jpg',
-  '/assets/media/images/1(5).jpg',
-  '/assets/media/images/1(6).jpg',
-  '/assets/media/images/1(7).jpg',
-  '/assets/media/images/1(8).jpg',
-  '/assets/media/images/1(9).jpg',
-  '/assets/media/images/1(10).jpg',
-  '/assets/media/images/1(11).jpg',
-  '/assets/media/images/1(12).jpg',
-  '/assets/media/images/1(13).jpg',
-  '/assets/media/images/1(14).jpg',
-  '/assets/media/images/1(15).jpg',
-  '/assets/media/images/1(16).jpg',
-  '/assets/media/images/1(17).jpg',
-  '/assets/media/images/1(18).jpg',
-  '/assets/media/images/1(19).jpg',
-  '/assets/media/images/1(20).jpg',
-  '/assets/media/images/1(21).jpg',
-  '/assets/media/images/1(22).jpg',
-  '/assets/media/images/1(23).jpg',
-  '/assets/media/images/1(24).jpg',
-  '/assets/media/images/1(25).jpg',
-  '/assets/media/images/1(26).jpg',
-  '/assets/media/images/1(27).jpg',
-  '/assets/media/images/1(28).jpg',
-  '/assets/media/images/1(29).jpg',
-  '/assets/media/images/1(30).jpg',
-  '/assets/media/images/1(31).jpg',
-  '/assets/media/images/1(32).jpg',
-  '/assets/media/images/1(33).jpg',
-  '/assets/media/images/1(34).jpg',
-  '/assets/media/images/1(35).jpg',
-  '/assets/media/images/1(36).jpg',
-  '/assets/media/images/1(37).jpg',
-  '/assets/media/images/1(38).jpg',
-  '/assets/media/images/1(39).jpg',
-  '/assets/media/images/1(40).jpg',
-  '/assets/media/images/1(41).jpg',
-  '/assets/media/images/1(42).jpg',
-  '/assets/media/images/1(43).jpg',
+  '/assets/media/image/1.png',
+  '/assets/media/image/2.png',
+  '/assets/media/image/3.png',
+  '/assets/media/image/4.png',
+  '/assets/media/image/5.png',
+  '/assets/media/image/6.png',
+  '/assets/media/image/7.png',
+  '/assets/media/image/8.png',
+  '/assets/media/image/9.png',
+  '/assets/media/image/10.png',
 ];
 
 function renderImage() {
   let img = new Image();
   img.src = imgSources[currentImgIndex];
+
+  img.onerror = function() {
+    console.error(`Error loading image: ${img.src}`);
+  };
+
   img.onload = function() {
     let aspectRatio = img.width / img.height;
     let newImgWidth, newImgHeight;
@@ -134,7 +106,7 @@ renderImage();
 setInterval(switchToNextImage, 3000);
 
 window.onresize = function () {
-let dibujoCanvas = document.querySelector('.col2 canvas');
-dibujoCanvas.width = dibujoCanvas.offsetWidth;
-dibujoCanvas.height = dibujoCanvas.offsetHeight;
+  let dibujoCanvas = document.querySelector('#dibujo-canvas');
+  dibujoCanvas.width = dibujoCanvas.offsetWidth;
+  dibujoCanvas.height = dibujoCanvas.offsetHeight;
 };
